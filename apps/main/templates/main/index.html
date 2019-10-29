@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Boxy Mama</title>
+    {% load static %}
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="{% static 'main/css/bootstrap.min.css' %}">
+    <!-- personal css -->
+    <link rel="stylesheet" href="{% static 'main/css/index.css' %}">
+    <!-- load halloween font -->
+    <script src='http://use.edgefonts.net/creepster.js'></script>
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: white;">
+            <a class="navbar-brand" href="#">
+                <img src="{% static 'main/img/logowhite.jpg' %}" width="30" height="30" class="d-inline-block align-top" alt="">
+                Boxy Mama
+            </a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Themed Boxes
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Halloween<span class="sr-only">(current)</span></a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main>
+            <div id="momInfo">
+                <img src="{% static 'main/img/mom.jpg' %}" alt="Mom Image">
+                <h3>About Boxy Mama</h3>
+                <h6>Handmade care packages for the people you miss most.</h6>
+                <ul>
+                    <li>  Every box is hand-crafted with love by the Boxy Mama herself.</li>
+                    <li>  Boxes are all Standard USPS Priority Mail Medium Size</li>
+                    <li>  Boxes include candy, a personalized note, small gifts, and other exciting items!</li>
+                    <li>  <span>For any questions please inquire below:</span></li>
+                </ul>
+                <div id="contact">
+                    <p>boxymama@gmail.com</p>
+                    <a href="https://www.facebook.com/boxymama/">Boxy Mama's Facebook Page</a>
+                </div>
+            </div>
+            <div id="currentOffering">
+                <div id="text">
+                    <header>
+                        <h3>Current Box: </h3>
+                        <h3><span id="halloweenSpan">HALLOWEEN!!!</span></h3>
+                    </header>
+                    <h4>Boxy Mama's Favorite Holiday!</h4>
+                    <p>This special Halloween giftbox is sure to satisfy your loved one's sweet tooth and also give them a little scare!</p>
+                    <p><span>Price: $49.95</span></p>
+                    <a rel="stylesheet" href="/purchase-page"> Order this box!</a>
+                    <div class="backg">
+                        <div class="ghost">
+                            <div class="hat">
+                                <div class="hat1">
+                                    <div class="s1"></div>
+                                </div>
+                            </div>
+                            <div class="face">
+                                <div class="eye-l">
+                                    <div class="dot1"></div>
+                                    <div class="dot2"></div>
+                                </div>
+                                <div class="eye-r">
+                                    <div class="dot1"></div>
+                                    <div class="dot2"></div>
+                                </div>
+                                <div class="blsh-l"></div>
+                                <div class="blsh-r"></div>
+                                <div class="mouth"></div>
+                            </div>
+                            <div class="hand-l"></div>
+                            <div class="hand-r"></div>
+                            <div class="pumpkin">
+                                <div class="handle"></div>
+                                <div class="p1"></div>
+                                <div class="p2"></div>
+                                <div class="p3"></div>
+                                <div class="p4"></div>
+                                <div class="e-l"></div>
+                                <div class="e-r"></div>
+                                <div class="nose"></div>
+                                <div class="m">
+                                    <div class="t1"></div>
+                                    <div class="t2"></div>
+                                    <div class="t3"></div>
+                                    <div class="t4"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img id="currentOfferingImg" src="{% static 'main/img/halloween7.jpg' %}" alt="Box Image">
+            </div>
+        </main>
+        <div class="testHeader">
+            <h1 class="testimonials">Halloween Testimonials... OOO</h1>
+            <h1><span class="halloweenspan">Spoooky!</span></h1>
+        </div>
+        <div id="images">
+            <div class="offsetUp">
+                <img src="{% static 'main/img/halloween1.jpg' %}" alt="#">
+                <img src="{% static 'main/img/halloween3.jpg' %}" alt="#"> 
+                <img src="{% static 'main/img/halloween12.jpg' %}" alt="#">
+            </div>
+            <div class="offsetDown">
+                <img src="{% static 'main/img/halloween2.jpg' %}" alt="#">
+                <img src="{% static 'main/img/halloween4.jpg' %}" alt="#">
+                <img src="{% static 'main/img/halloween10.jpg' %}" alt="#">
+            </div>
+            <div class="offsetUp">
+                <img src="{% static 'main/img/halloween9.jpg' %}" alt="#">
+                <img src="{% static 'main/img/halloween8.jpg' %}" alt="#">
+                <img src="{% static 'main/img/frogkid.jpg' %}" alt="#">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

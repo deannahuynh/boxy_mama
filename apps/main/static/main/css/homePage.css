@@ -1,0 +1,211 @@
+/* *{
+    outline: 1px dotted red;
+} */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    margin-bottom: 1rem;
+    background-color: white;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    z-index: 3;
+}
+
+#dropdown1 li a {
+    color: lightslategray;
+}
+
+.dropdown-content {
+    position: absolute;
+    top: -64px;
+}
+
+.dropdown-trigger {
+    display: flex;
+    align-items: center;
+}
+
+object {
+    vertical-align: middle;
+    align-self: center;
+    margin-right: 1rem;
+    width: 4rem;
+    height: 4rem;
+}
+
+#logo {
+    padding: 0;
+}
+
+nav ul li {
+    vertical-align: middle;
+}
+
+nav ul li a {
+    color: lightslategray;
+}
+
+nav ul li a:hover {
+    background-color: #fadad1;
+}
+
+.active {
+    background-color: none;
+}
+
+.wrapper {
+    width: 98vw;
+    margin: 0 auto;
+}
+
+.banner {
+    height: 10vw;
+    background-image: linear-gradient(to right bottom, rgb(230, 166, 141, .8), rgb(248, 225, 203, .8)), url(../img/students.png);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: .8rem;
+}
+
+.text_main {
+    color: white;
+    font-size: 3rem;
+    display: block;
+    font-family: 'Satisfy', cursive;
+    text-shadow: .5px .5px 1px lightslategray;
+}
+
+.about {
+    height: 25vh;
+    width: 40vw;
+    margin: 30px auto;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.about_heading {
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: rgb(226, 148, 117);
+    text-shadow: .5px .5px 3px rgb(59, 59, 59);
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: .5rem;
+}
+
+.heading_color {
+    text-align: center;
+    width: 80%;
+    height: 1.2rem;
+    background-color: rgba(248, 232, 203, 0.8);
+    position: absolute;
+    top: 2.7rem;
+    left: 5rem;
+    z-index: -1;
+}
+
+.about ul li {
+    font-size: 1.5rem;
+    font-weight: 100;
+    line-height: 2.5rem;
+}
+
+.about ul li span {
+    font-weight: 400;
+    /* font-style: italic; */
+}
+
+.about_link {
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+}
+
+.about_link a {
+    color: black; 
+    margin-right: 10px;
+}
+
+.theme_heading_color {
+    width: 95%;
+    left: 1rem;
+}
+
+.about_sub {
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+.boxy_info .about {
+    height: 5vh;
+}
+
+.themes {
+    width: 100%;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.box_heading {
+    text-transform: uppercase;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.theme_options {
+    min-height: 30rem;
+    background-color: rgb(230, 166, 141, .8);
+    font-family: 'Satisfy', cursive;
+    color: white;
+    text-shadow: .5px .5px 2px lightslategray;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.theme_options a { 
+    color: white;
+    text-shadow: .5px .5px 2px lightslategray;
+    font-size: 3rem;
+}
+
+.card {
+    text-align: center;
+    border-radius: 0;
+
+}
+
+.row .col.s3 {
+    margin-left: 3%;
+}
+
+.col.s3.first {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+

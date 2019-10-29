@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    margin-bottom: 1rem;
+    background-color: white;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    z-index: 3;
+}
+
+#dropdown1 li a {
+    color: lightslategray;
+}
+
+.dropdown-content {
+    position: absolute;
+    top: -64px;
+}
+
+.dropdown-trigger {
+    display: flex;
+    align-items: center;
+}
+
+nav object {
+    vertical-align: middle;
+    align-self: center;
+    margin-right: 1rem;
+    width: 4rem;
+    height: 4rem;
+}
+
+#logo {
+    padding: 0;
+}
+
+nav ul li {
+    vertical-align: middle;
+}
+
+nav ul li a {
+    color: lightslategray;
+}
+
+nav ul li a:hover {
+    background-color: #fadad1;
+}
+
+.active {
+    background-color: none;
+}
+
+.wrapper {
+    width: 75vw;
+    margin: 0 auto;
+}
+
+.order_form {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.boxy_info {
+    height: 10vh;
+}
+
+.about {
+    height: 10vh;
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+a.home_link {
+    font-size: 1rem;
+    color: rgb(226, 148, 117);
+}
+
+.about_heading {
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: rgb(226, 148, 117);
+    text-shadow: .5px .5px 3px rgb(59, 59, 59);
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: .5rem;
+}
+
+.heading_color {
+    text-align: center;
+    width: 35%;
+    height: 1.2rem;
+    background-color: rgba(248, 232, 203, 0.8);
+    position: absolute;
+    top: 2.7rem;
+    left: 25vw;
+    z-index: -1;
+}
+
+form label {
+    font-size: 1rem;
+}
+
+.recipient_info h4, .sender_info h4 {
+    font-style: italic;
+}
+
+.recipient_info, .sender_info {
+    width: 45%;
+}
+
+.btn_wrapper {
+    text-align: right;
+    width: 75vw;
+    margin: 2rem auto;
+}
+
+.error {
+    color: red;
+    font-size: 1rem;
+}
+
+#select {
+    width: 18%;
+    display: flex;
+    padding: 0;
+}
+
+#select label {
+    left: 0;
+}

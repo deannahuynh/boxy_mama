@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Boxy Mama</title>
+    {% load static %}
+    <!-- source sans serif font -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:100,300,400,700" rel="stylesheet">
+    <!-- cursive font -->
+    <link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
+    <!-- materialize css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- animation.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <!-- personal css -->
+    <link rel="stylesheet" href="{% static 'main/css/halloween.css' %}">
+    <!-- material icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- materialize js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+    </script>
+    <!-- dropdown trigger -->
+    <script>
+        $( document ).ready(function (){
+            $(".dropdown-trigger").dropdown({hover: false});
+        })
+    </script>
+</head>
+<body>
+    <ul id="dropdown1" class="dropdown-content">
+        <div class="dropdown-wrap">
+            <li><a href="/birthday">Birthday</a></li>
+            <li><a href="/everyday">College Finals</a></li>
+            <li class="active deep-orange lighten-5"><a href="/halloween">Halloween</a></li>
+        </div>
+    </ul>
+    <nav>
+        <ul class="left hide-on-med-and-down">
+            <li>
+                <a id="logo" href="/">
+                    <object  data="../../static/main/img/boxy_no_text.svg" type="image/svg+xml"></object>
+                </a>
+            </li>
+            <li><a href="/home">Boxy Mama</a></li>
+            <li class="active deep-orange lighten-5"><a class="dropdown-trigger" href="#!" data-target="dropdown1">Themed boxes<i class="material-icons right" id="arrow">arrow_drop_down</i></a></li>
+        </ul>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="/cart">Cart</a></li>
+        </ul>
+    </nav>
+    <div class="wrapper">
+        
+        <div class="row boxy_info">
+            <div class="about">
+                <div class="about_heading">
+                    Halloween &nbsp; boxes
+                    <div class="heading_color theme_heading_color"></div>
+                </div>
+            </div>
+        </div>
+        <div class="sample_boxes">
+            <object data="../../static/main/img/halloween_jillian.svg" type="image/svg+xml"></object>
+            <object data="../../static/main/img/halloween_stephen.svg" type="image/svg+xml"></object>
+        </div>
+        <div class="row order_btn">
+            <a class="waves-effect waves-light btn-large deep-orange lighten-3" id="shop_link" href="/order-page">order now</a>
+        </div>
+        <div class="footer">
+            
+        </div>
+    </div>
+
+</body>
+</html>

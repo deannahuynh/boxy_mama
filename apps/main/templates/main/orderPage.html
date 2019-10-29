@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Boxy Mama</title>
+    {% load static %}
+    <!-- source sans serif font -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:100,300,400,700" rel="stylesheet">
+    <!-- cursive font -->
+    <link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
+    <!-- materialize css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- animation.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <!-- personal css -->
+    <link rel="stylesheet" href="{% static 'main/css/orderPage.css' %}">
+    <!-- material icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- materialize js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+    </script>
+    <!-- dropdown trigger -->
+    <script>
+        $( document ).ready(function (){
+            $(".dropdown-trigger").dropdown({hover: false});
+            $(document).ready(function(){
+                $('select').formSelect();
+            });
+        
+
+            $("#logo").click(function(){
+                window.location = "landingPage.html";
+            })
+        })
+    </script>
+</head>
+<body>
+    <ul id="dropdown1" class="dropdown-content">
+        <div class="dropdown-wrap">
+            <li><a href="#">Birthday</a></li>
+            <li><a href="/everyday">College Finals</a></li>
+            <li><a href="/halloween">Halloween</a></li>
+        </div>
+    </ul>
+    <nav>
+        <ul class="left hide-on-med-and-down">
+            <li id="logo">
+                <object data="../../static/main/img/boxy_no_text.svg" type="image/svg+xml"></object>
+            </li>
+            <li><a href="/home">Boxy Mama</a></li>
+            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Themed boxes<i class="material-icons right" id="arrow">arrow_drop_down</i></a></li>
+        </ul>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="/cart">Cart</a></li>
+        </ul>
+    </nav>
+    <div class="wrapper">
+        <a class="home_link" href="/home">Back</a>
+        <main>
+        {% if messages %}
+            <div class="errors">
+                <ul class="messages">
+                    {% for message in messages %}
+                    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+        <div class="row boxy_info">
+            <div class="about">
+                <div class="about_heading">
+                    Order &nbsp; form
+                    <div class="heading_color theme_heading_color"></div>
+                </div>
+            </div>
+        </div>
+        <form action="/order" method="POST">
+            {% csrf_token %}
+                <div class="row btn-select">
+                    <div class="input-field col s2 left" id="select">
+                        <select name ="box_theme">
+                            <option value="1">College Finals</option>
+                            <option value="2">Halloween</option>
+                        </select>
+                        <label>Choose a box theme</label>
+                    </div>
+                </div>
+                <div class="order_form">
+                    <div class="recipient_info">
+                        <h4><span>Recipient's</span> information: </h4>
+                        <label for="fname"> First Name: (This will appear on the inside of the box)</label>
+                        <input type="text" name="first_name" id="fname">
+                        <label for="lname"> Last Name:</label>
+                        <input type="text" name="last_name" id="lname">
+                        <label for="firstAddress">Address 1:</label>
+                        <input type="text" name="street_address" id="firstAddress">
+                        {% if messages %}
+                            <p class="errors">{{messages.error}}</p>
+                        {% endif%}
+                        <label for="secondAddress">Address 2 (Apt/Suite/ Other):</label>
+                        <input type="text" name="street_address2" id="secondAddress">
+                        <label for="city">City:</label>
+                        <input type="text" name="city" id="city">
+                        <label for="state">State:</label>
+                        <input type="text" name="state" id="state">
+                        <label for="country">Country:</label>
+                        <input type="text" name="country" id="country">
+                        <label for="zip">ZipCode:</label>
+                        <input type="text" name="zip" id="zip">
+                        <label id="note_label" for="note">Personalized note for your loved one: (Included in Box)</label>
+                        <textarea class="materialize-textarea" id="note_input" type="text" name="note" id="note"></textarea>
+                    </div>
+                    <div class="sender_info">
+                        <h4>Sender's</span> information: </h4>
+                        <label for="email">Email: </label>
+                        <input type="email" name="email" id="email">
+                    </div>
+                </div>
+                <div class="btn_wrapper">
+                    <button type="submit" class="waves-effect waves-light btn-small deep-orange lighten-3">Add to cart</button>
+                </div>
+            </form>
+        </main>
+    </div>
+</body>
+</html>

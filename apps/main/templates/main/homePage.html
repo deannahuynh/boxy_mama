@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Boxy Mama</title>
+    {% load static %}
+    <!-- source sans serif font -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:100,300,400,700" rel="stylesheet">
+    <!-- cursive font -->
+    <link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
+    <!-- materialize css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- animation.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <!-- personal css -->
+    <link rel="stylesheet" href="{% static 'main/css/homePage.css' %}">
+    <!-- material icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- materialize js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+    </script>
+    <!-- dropdown trigger -->
+    <script>
+        $( document ).ready(function (){
+            $(".dropdown-trigger").dropdown({hover: false});
+        })
+    </script>
+</head>
+<body>
+    <ul id="dropdown1" class="dropdown-content">
+        <div class="dropdown-wrap">
+            <li><a href="/birthday">Birthday</a></li>
+            <li><a href="/everyday">College Finals</a></li>
+            <li><a href="/halloween">Halloween</a></li>
+        </div>
+    </ul>
+    <nav>
+        <ul class="left hide-on-med-and-down">
+            <li>
+                <a id="logo" href="/">
+                    <object  data="../../static/main/img/boxy_no_text.svg" type="image/svg+xml"></object>
+                </a>
+            </li>
+            <li class="active deep-orange lighten-5"><a href="/home">Boxy Mama</a></li>
+            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Themed boxes<i class="material-icons right" id="arrow">arrow_drop_down</i></a></li>
+        </ul>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="#">Cart</a></li>
+        </ul>
+    </nav>
+    <div class="wrapper">
+        <div class="banner">
+            <div class="text">
+                <div class="text_main">
+                    Hand-crafted packages for people you care about the most
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="about">
+                <div class="about_heading">
+                    Unbox &nbsp; our &nbsp; story
+                    <div class="heading_color"></div>
+                </div>
+                <ul>
+                    <li class="about_sub">Every box is hand-crafted with love by the Boxy Mama herself.</li>
+                    <li class="about_sub">Boxes include <span>candy, a personalized note, small gifts</span>, and other <span>exciting</span> items!</span></li>
+                    <li class="about_sub">Boxes are all Standard USPS Priority Mail Medium Size.</li>
+
+                    <div class="about_link">
+                        <a href="#">See more</a><i class="material-icons" id="arrow">arrow_right_alt</i>
+                    </div>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row boxy_info">
+            <div class="about">
+                <div class="about_heading">
+                    Current &nbsp; box &nbsp; themes
+                    <div class="heading_color theme_heading_color"></div>
+                </div>
+            </div>
+        </div>
+        <div class="themes">
+            <div class="row">
+                <div class="col s3 first">
+                    <div class="card theme_options"><a href="/halloween">Halloween</a></div>
+                </div>
+                <div class="col s3">
+                    <div class="card theme_options"><a href="#">Valentine's Day</a> </div>
+                </div>
+                <div class="col s3">
+                    <div class="card theme_options"><a href="/everyday">College Finals</a> </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+
+        </div>
+    </div>
+
+</body>
+</html>
