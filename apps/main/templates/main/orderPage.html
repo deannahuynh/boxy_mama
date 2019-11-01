@@ -41,7 +41,6 @@
 <body>
     <ul id="dropdown1" class="dropdown-content">
         <div class="dropdown-wrap">
-            <li><a href="#">Birthday</a></li>
             <li><a href="/everyday">College Finals</a></li>
             <li><a href="/halloween">Halloween</a></li>
         </div>
@@ -55,7 +54,7 @@
             <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Themed boxes<i class="material-icons right" id="arrow">arrow_drop_down</i></a></li>
         </ul>
         <ul class="right hide-on-med-and-down">
-            <li><a href="/cart">Cart</a></li>
+            <li class="active deep-orange lighten-5"><a href="/order-page">Order</a></li>
         </ul>
     </nav>
     <div class="wrapper">
@@ -83,8 +82,8 @@
                 <div class="row btn-select">
                     <div class="input-field col s2 left" id="select">
                         <select name ="box_theme">
-                            <option value="1">College Finals</option>
-                            <option value="2">Halloween</option>
+                            <option value="College Finals">College Finals</option>
+                            <option value="Halloween">Halloween</option>
                         </select>
                         <label>Choose a box theme</label>
                     </div>
@@ -107,10 +106,10 @@
                         <input type="text" name="city" id="city">
                         <label for="state">State:</label>
                         <input type="text" name="state" id="state">
-                        <label for="country">Country:</label>
-                        <input type="text" name="country" id="country">
                         <label for="zip">ZipCode:</label>
                         <input type="text" name="zip" id="zip">
+                        <label for="country">Country:</label>
+                        <input type="text" name="country" id="country">
                         <label id="note_label" for="note">Personalized note for your loved one: (Included in Box)</label>
                         <textarea class="materialize-textarea" id="note_input" type="text" name="note" id="note"></textarea>
                     </div>

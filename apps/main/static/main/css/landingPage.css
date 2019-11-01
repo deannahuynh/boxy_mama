@@ -48,7 +48,7 @@ body {
 
 .main {
     height: 90vh;
-    background-image: linear-gradient(to right bottom, rgba(230, 166, 141, 0.8), rgb(248, 225, 203, .8)), url(../img/box3.jpg);
+    background-image: linear-gradient(to right bottom, rgba(230, 166, 141, 0.8), rgb(248, 225, 203, .8));
     background-size: cover;
     background-position: top;
     position: relative;

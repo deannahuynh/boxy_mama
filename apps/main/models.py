@@ -45,6 +45,7 @@ class Address(models.Model):
     objects = AddressManager()
     
 class Order(models.Model):
+    hash_id= models.BigIntegerField(null=True)
     box_theme= models.CharField(max_length=200, null=True)
     first_name = models.CharField(max_length=60)
     last_name = models.CharField(max_length=60)

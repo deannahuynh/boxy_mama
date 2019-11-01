@@ -59,6 +59,37 @@ nav ul li a:hover {
 }
 
 .wrapper {
-    width: 98vw;
+    width: 75vw;
     margin: 0 auto;
+}
+
+a.home_link {
+    font-size: 1rem;
+    color: rgb(226, 148, 117);
+}
+
+.cart_info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.recipient_info, 
+.sender_info {
+    width: 45%;
+    font-size: 1rem;
+}
+
+.recipient_info th,
+.sender_info th {
+    font-size: 1.25rem;
+}
+
+.data_title {
+    width: 35%;
+}
+
+.sender_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
